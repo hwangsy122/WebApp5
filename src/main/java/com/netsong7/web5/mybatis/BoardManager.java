@@ -43,6 +43,12 @@ public class BoardManager {
 		Board board = session.selectOne("findBySeq", seq);
 		return board;
 	}
+	
+	public static void update(Board board){
+		SqlSession session = sqlSessionFactory.openSession();
+		session.update("update", board);
+		session.commit();
+	}
 }
 
 

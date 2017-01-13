@@ -89,6 +89,7 @@ public class BoardDaoImpl implements BoardDao {
 	
 	@Override
 	public Board findBySeq(int seq) throws SQLException {
+		/*
 		String sql = "select * from tblSpringBoard where seq=" + seq;
 		
 		// ResultSetExtractor
@@ -112,16 +113,23 @@ public class BoardDaoImpl implements BoardDao {
 		});
 		
 		return board;
+		*/
+		
+		return BoardManager.findBySeq(seq);
 	}
 
 	@Override
 	public void update(Board board) throws SQLException {
+		/*
 		String sql = "update tblSpringBoard set title=?, writer=?, "
 				+ "content=? where seq=?";
 		
 		Object[] val = new Object[]{board.getTitle(), 
 			board.getWriter(), board.getContent(), board.getSeq()};
 		jdbcTemplate.update(sql, val);
+		*/
+		
+		BoardManager.update(board);
 	}
 
 	@Override

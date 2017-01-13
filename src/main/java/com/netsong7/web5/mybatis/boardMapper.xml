@@ -14,6 +14,12 @@
 	<select id="findBySeq" parameterType="int" resultType="Board">
 		select * from tblSpringBoard where seq=#{seq}
 	</select>
+	
+	<select id="update" parameterType="Board">
+		update tblSpringBoard 
+		set title=#{title}, writer=#{writer}, content=#{content} 
+		where seq=#{seq}
+	</select>
 </mapper>
 
 
