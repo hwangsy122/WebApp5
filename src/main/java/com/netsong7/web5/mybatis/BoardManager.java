@@ -37,6 +37,12 @@ public class BoardManager {
 		session.insert("write", board);
 		session.commit();
 	}
+	
+	public static Board findBySeq(int seq){
+		SqlSession session = sqlSessionFactory.openSession();
+		Board board = session.selectOne("findBySeq", seq);
+		return board;
+	}
 }
 
 

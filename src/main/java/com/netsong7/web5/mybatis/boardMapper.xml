@@ -2,12 +2,25 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.netsong7.web5.mybatis.boardMapper">
-	<select id="getList" resultType="com.netsong7.web5.domain.Board">
+	<select id="getList" resultType="Board">
 		select * from tblSpringBoard order by seq desc
 	</select>
 	
-	<insert id="write" parameterType="com.netsong7.web5.domain.Board">
+	<insert id="write" parameterType="Board">
 		insert into tblSpringBoard(title, content,	writer, regdate, hitcount, password) 
 		values(#{title}, #{content}, #{writer}, now(), 0, '1111')
 	</insert>
+	
+	<select id="findBySeq" parameterType="int" resultType="Board">
+		select * from tblSpringBoard where seq=#{seq}
+	</select>
 </mapper>
+
+
+
+
+
+
+
+
+
