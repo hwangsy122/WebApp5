@@ -6,4 +6,8 @@
 		select * from tblSpringBoard order by seq desc
 	</select>
 	
+	<insert id="write" parameterType="com.netsong7.web5.domain.Board">
+		insert into tblSpringBoard(title, content,	writer, regdate, hitcount, password) 
+		values(#{title}, #{content}, #{writer}, now(), 0, '1111')
+	</insert>
 </mapper>

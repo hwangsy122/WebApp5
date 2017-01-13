@@ -8,6 +8,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+import com.netsong7.web5.domain.Board;
+
 public class BoardManager {
 	private static SqlSessionFactory sqlSessionFactory;
 	
@@ -28,6 +30,12 @@ public class BoardManager {
 		SqlSession session = sqlSessionFactory.openSession();
 		list = session.selectList("getList");
 		return list;
+	}
+	
+	public static void write(Board board){
+		SqlSession session = sqlSessionFactory.openSession();
+		session.insert("write", board);
+		session.commit();
 	}
 }
 

@@ -52,6 +52,7 @@ public class BoardDaoImpl implements BoardDao {
 
 	@Override
 	public void write(Board board) throws SQLException {
+		/*
 		String sql = "insert into tblSpringBoard(title, content, "
 				+ "writer, regdate, hitcount, "
 				+ "password) values(?, ?, ?, now(), 0, '1111')";
@@ -62,6 +63,9 @@ public class BoardDaoImpl implements BoardDao {
 		Object[] values = new Object[]{board.getTitle(), 
 				board.getContent(), board.getWriter()};
 		jdbcTemplate.update(sql, values);
+		*/
+		
+		BoardManager.write(board);
 	}
 	
 	/*
