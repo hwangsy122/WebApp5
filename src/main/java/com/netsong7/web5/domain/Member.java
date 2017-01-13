@@ -11,7 +11,8 @@ public class Member {
 	private String password;
 	private String name;
 	private Date registerDate;
-
+	
+	public Member(){}
 	public Member(String email, String password, String name, Date registerDate) {
 		this.email = email;
 		this.password = password;
@@ -23,6 +24,18 @@ public class Member {
 		this.id = id;
 	}
 
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void setRegisterDate(Date registerDate) {
+		this.registerDate = registerDate;
+	}
 	public Long getId() {
 		return id;
 	}

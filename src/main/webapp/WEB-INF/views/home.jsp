@@ -13,7 +13,7 @@
 <P>  The time on the server is ${serverTime}. </P>
 <br><br>
 <a href="list.board">게시판</a><br>
-<a href="">로그인</a><br>
+<a href="/login/login">로그인</a><br>
 <a href="<c:url value="/register/step1" />">회원 가입하기</a>
 </body>
 </html>

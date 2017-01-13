@@ -4,6 +4,7 @@
 <configuration>
   <typeAliases>
   	<typeAlias type="com.netsong7.web5.domain.Board" alias="Board"/>
+  	<typeAlias type="com.netsong7.web5.domain.Member" alias="Member"/>
   </typeAliases>	
 
   <environments default="development">
@@ -20,6 +21,7 @@
   
   <mappers>
     <mapper resource="com/netsong7/web5/mybatis/boardMapper.xml"/>
+    <mapper resource="com/netsong7/web5/mybatis/memberMapper.xml"/>
   </mappers>
 </configuration>
 
