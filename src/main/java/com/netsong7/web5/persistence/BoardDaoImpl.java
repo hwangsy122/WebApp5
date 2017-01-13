@@ -14,6 +14,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 
 import com.netsong7.web5.domain.Board;
+import com.netsong7.web5.mybatis.BoardManager;
 
 
 @Component("boardDao")
@@ -23,6 +24,7 @@ public class BoardDaoImpl implements BoardDao {
 
 	@Override
 	public List getList() throws SQLException {
+		/*
 		List result = new ArrayList<Board>();
 		String sql = "select * from tblSpringBoard order by seq desc";
 		
@@ -43,6 +45,9 @@ public class BoardDaoImpl implements BoardDao {
 		
 		result = jdbcTemplate.query(sql, rowmapper);
 		return result;
+		*/
+		
+		return BoardManager.getList();
 	}
 
 	@Override
